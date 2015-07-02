@@ -1,0 +1,18 @@
+{
+  "name": "generator-vrjs",
+  "version": "0.0.0",
+  "description": "Generator for vrjs projects",
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "[\"yeoman-generator\"",
+    "\"virtual",
+    "reality\"]"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.20.1"
+  },
+  "author": "Scott Frees",
+  "license": "BSD-2-Clause"
+}
