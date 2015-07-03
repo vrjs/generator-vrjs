@@ -20,20 +20,21 @@ module.exports = generators.Base.extend({
     console.log('trackr setup just ran');
   }, 
   writing: function () {
+    var opts = { title : this.appname }
   	this.fs.copyTpl(
       this.templatePath('index.js'),
       this.destinationPath(this.appname + '/index.js'),
-      { title:this.appname }
+      opts
     );
     this.fs.copyTpl(
       this.templatePath('index.html'),
       this.destinationPath(this.appname + '/index.html'),
-     { title:this.appname }
+      opts
     );
     this.fs.copyTpl(
       this.templatePath('package.json'),
       this.destinationPath(this.appname + '/package.json'),
-      { title:this.appname }
+      opts
     );
   }, 
   post_scaffold_message: function() {
