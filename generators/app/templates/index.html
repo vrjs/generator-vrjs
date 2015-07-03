@@ -19,6 +19,10 @@
         var scene, camera, renderer;
         var geometry, material, mesh;
 
+        var keytrackr = require('vrjs-trackr-key')
+        var trackr = keytrackr.make(THREE);
+        trackr.scale = new THREE.Vector3(5, 5, 5);
+
         init();
         animate();
 
@@ -38,6 +42,7 @@
 
             mesh = new THREE.Mesh( geometry, material );
             scene.add( mesh );
+            trackr.add( mesh );
             
             var groundTexture = THREE.ImageUtils.loadTexture( "three/textures/terrain/grasslight-big.jpg" );
             groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
@@ -60,11 +65,8 @@
         }
 
         function animate() {
-
+            trackr.poll()
             requestAnimationFrame( animate );
-
-            mesh.rotation.x += 0.01;
-            mesh.rotation.y += 0.02;
 
             renderer.render( scene, camera );
         }
