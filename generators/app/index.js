@@ -23,17 +23,17 @@ module.exports = generators.Base.extend({
   	this.fs.copyTpl(
       this.templatePath('index.js'),
       this.destinationPath(this.appname + '/index.js'),
-      {  }
+      { title:this.appname }
     );
     this.fs.copyTpl(
       this.templatePath('index.html'),
       this.destinationPath(this.appname + '/index.html'),
-      {  }
+     { title:this.appname }
     );
     this.fs.copyTpl(
       this.templatePath('package.json'),
       this.destinationPath(this.appname + '/package.json'),
-      {  }
+      { title:this.appname }
     );
   }, 
   post_scaffold_message: function() {
