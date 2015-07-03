@@ -9,7 +9,7 @@
 - Yoeman
   - `npm install -g yo`
 
-- Electron
+- Github's Electron
   - `npm install electron-prebuilt -g`	
 	
 ## Install from Source
@@ -19,11 +19,16 @@
 > cd generator-vrjs
 > npm install
 > npm link
-> npm install electron-prebuilt -g
 ```
 
 ## Create project
 ```
 > yo vrjs
 ```
-The generator will ask you for a project name (lets say you call it `app`).  Once its done, `cd app` and type `electron .` to start the vrjs application.
+The generator will ask you for a project name (lets say you call it `app`).  Once its done, prepare your app and start it by doing the following:
+
+```
+> cd app
+> npm install
+> electron .
+```
