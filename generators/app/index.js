@@ -23,7 +23,7 @@ module.exports = generators.Base.extend({
   	this.fs.copyTpl(
       this.templatePath('index.js'),
       this.destinationPath(this.appname + '/index.js'),
-      {  }git
+      {  }
     );
     this.fs.copyTpl(
       this.templatePath('index.html'),
