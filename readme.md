@@ -22,13 +22,12 @@
 ```
 
 ## Create project
+
+Create a directory to hold your project (i.e. `app` -> `mkdir app`).  Move into the directory -> `cd app`.  Then run the generator: 
+
 ```
 > yo vrjs
 ```
-The generator will ask you for a project name (lets say you call it `app`).  Once its done, prepare your app and start it by doing the following:
+The generator will ask you for a project name (defaults to the current directory).  
 
-```
-> cd app
-> npm install
-> electron .
-```
+You can then run your app by typing `electron .`.
