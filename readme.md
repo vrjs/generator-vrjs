@@ -12,7 +12,9 @@
 - Github's Electron
   - `npm install electron-prebuilt -g`	
 	
-## Install from Source
+## Install 
+
+You can install using the `yo` menu (search for `vrjs`) or install directly from the source code repository.
 
 ```
 > git clone https://github.com/vrjs/generator-vrjs
@@ -20,6 +22,7 @@
 > npm install
 > npm link
 ```
+
 
 ## Create project
 
