@@ -35,26 +35,25 @@ module.exports = generators.Base.extend({
     var opts = { title : this.appname }
   	this.fs.copyTpl(
       this.templatePath('index.js'),
-      this.destinationPath(this.appname + '/index.js'),
+      this.destinationPath('index.js'),
       opts
     );
     this.fs.copyTpl(
       this.templatePath('index.html'),
-      this.destinationPath(this.appname + '/index.html'),
+      this.destinationPath('index.html'),
       opts
     );
     this.fs.copyTpl(
       this.templatePath('package.json'),
-      this.destinationPath(this.appname + '/package.json'),
+      this.destinationPath('package.json'),
       opts
     );
-    if (this.three_textures) this.directory("three/textures", this.appname + "/three/textures");
-    if (this.three_utils) this.directory("three/js", this.appname + "/three/js");
+    if (this.three_textures) this.directory("three/textures", "three/textures");
+    if (this.three_utils) this.directory("three/js", "three/js");
   }, 
   post_scaffold_message: function() {
   	console.log('vrjs application created at ' + this.destinationPath(this.appname));
-  	console.log("'cd " + this.appname + "'' and then 'electron .' to start");
-  	console.log("  ... remember, you need electron installed already!")
-  	console.log("      sudo npm install electron-prebuilt -g")
+    this.npmInstall()
+  	this.config.save();
   }
 });
