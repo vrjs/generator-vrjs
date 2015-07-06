@@ -30,4 +30,4 @@ Create a directory to hold your project (i.e. `app` -> `mkdir app`).  Move into 
 ```
 The generator will ask you for a project name (defaults to the current directory).  
 
-You can then run your app by typing `electron .`.
+You can then run your app by typing `electron .`
