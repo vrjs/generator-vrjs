@@ -33,22 +33,21 @@ module.exports = generators.Base.extend({
   }, 
   writing: function () {
     var opts = { title : this.appname }
-  	this.fs.copyTpl(
-      this.templatePath('index.js'),
-      this.destinationPath('index.js'),
-      opts
-    );
-    this.fs.copyTpl(
-      this.templatePath('index.html'),
-      this.destinationPath('index.html'),
-      opts
-    );
-    this.fs.copyTpl(
-      this.templatePath('package.json'),
-      this.destinationPath('package.json'),
-      opts
-    );
-    if (this.three_textures) this.directory("three/textures", "three/textures");
+    var files = [
+      'index.js', 
+      'index.html', 
+      'package.json', 
+      'app.js', 
+      'style.css']
+    for (var i = 0; i < files.length; i++ ) {
+      this.fs.copyTpl(
+        this.templatePath(files[i]), 
+        this.destinationPath(files[i]), 
+        opts
+      );
+    }
+    this.directory("vrjs", "vrjs");
+  	if (this.three_textures) this.directory("three/textures", "three/textures");
     if (this.three_utils) this.directory("three/js", "three/js");
   }, 
   post_scaffold_message: function() {
