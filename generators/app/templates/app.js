@@ -30,9 +30,15 @@ function init() {
         wireframe: true
     });
 
+    // add cube and attach it to channel 0 of tracker
     mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
-    trackr.add(mesh);
+    trackr.add(mesh, 0);
+
+    // add another cube and attach it to channel 1 of tracker
+    mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+    trackr.add(mesh, 1);
 
     var groundTexture = THREE.ImageUtils.loadTexture("three/textures/terrain/grasslight-big.jpg");
     groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
