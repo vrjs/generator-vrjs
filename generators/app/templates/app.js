@@ -10,7 +10,6 @@ var active_renderer;
 
 var keytrackr = require('vrjs-trackr-key')
 var trackr = keytrackr.make(THREE);
-trackr.scale = new THREE.Vector3(5, 5, 5);
 
 init();
 animate();
@@ -23,6 +22,10 @@ function init() {
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
     camera.position.y = 50;
     camera.position.z = 1500;
+
+    trackr.channels[2].offset = new THREE.Vector3(0, 50, 1500);
+    trackr.channels[2].scale = new THREE.Vector3(100, 100, 100);
+    trackr.add(camera, 2);
 
     geometry = new THREE.BoxGeometry(200, 200, 200);
     material = new THREE.MeshBasicMaterial({
