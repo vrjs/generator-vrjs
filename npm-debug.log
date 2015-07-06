@@ -1,0 +1,163 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.5
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/sfrees/projects/generator-vrjs',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/sfrees/.npm/generator-vrjs/0.0.2/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/sfrees/.npm/generator-vrjs/0.0.2/package.tgz',
+9 verbose tar pack   '/Users/sfrees/projects/generator-vrjs' ]
+10 verbose tarball /Users/sfrees/.npm/generator-vrjs/0.0.2/package.tgz
+11 verbose folder /Users/sfrees/projects/generator-vrjs
+12 info prepublish generator-vrjs@0.0.2
+13 verbose addLocalTarball adding from inside cache /Users/sfrees/.npm/generator-vrjs/0.0.2/package.tgz
+14 silly cache afterAdd generator-vrjs@0.0.2
+15 verbose afterAdd /Users/sfrees/.npm/generator-vrjs/0.0.2/package/package.json not in flight; writing
+16 verbose afterAdd /Users/sfrees/.npm/generator-vrjs/0.0.2/package/package.json written
+17 silly publish { name: 'generator-vrjs',
+17 silly publish   version: '0.0.2',
+17 silly publish   description: 'Generator for vrjs projects',
+17 silly publish   files: [ 'generators' ],
+17 silly publish   keywords: [ 'yeoman-generator', 'virtual reality' ],
+17 silly publish   dependencies: { 'yeoman-generator': '^0.20.1' },
+17 silly publish   author: { name: 'Scott Frees' },
+17 silly publish   license: 'MIT',
+17 silly publish   readme: '# Setup\n\n## Pre-requisites\n\n- Node.js version 0.12 and above\n  - [https://nodejs.org/download/](https://nodejs.org/download/)\n  - See [this](https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories) for Linux\n\n- Yoeman\n  - `npm install -g yo`\n\n- Github\'s Electron\n  - `npm install electron-prebuilt -g`\t\n\t\n## Install from Source\n\n```\n> git clone https://github.com/vrjs/generator-vrjs\n> cd generator-vrjs\n> npm install\n> npm link\n```\n\n## Create project\n\nCreate a directory to hold your project (i.e. `app` -> `mkdir app`).  Move into the directory -> `cd app`.  Then run the generator: \n\n```\n> yo vrjs\n```\nThe generator will ask you for a project name (defaults to the current directory).  \n\nYou can then run your app by typing `electron .`\n',
+17 silly publish   readmeFilename: 'readme.md',
+17 silly publish   gitHead: '393b190df95488e5754a097bc92f87c49c2a5581',
+17 silly publish   _id: 'generator-vrjs@0.0.2',
+17 silly publish   scripts: {},
+17 silly publish   _shasum: 'dd5d59a8a29899a6508f6c0fe3e489ca4a1bd9af',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name generator-vrjs
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/generator-vrjs
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/sfrees/.npm/generator-vrjs/0.0.2/package.tgz
+25 verbose request uri https://registry.npmjs.org/generator-vrjs
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 10:17:14 AM
+28 verbose request id 76b718ccd154544b
+29 http request PUT https://registry.npmjs.org/generator-vrjs
+30 http 503 https://registry.npmjs.org/generator-vrjs
+31 verbose bad json <?xml version="1.0" encoding="utf-8"?>
+31 verbose bad json <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+31 verbose bad json  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+31 verbose bad json <html>
+31 verbose bad json   <head>
+31 verbose bad json     <title>503 backend read error</title>
+31 verbose bad json   </head>
+31 verbose bad json   <body>
+31 verbose bad json     <h1>Error 503 backend read error</h1>
+31 verbose bad json     <p>backend read error</p>
+31 verbose bad json     <h3>Guru Mediation:</h3>
+31 verbose bad json     <p>Details: cache-iad2144-IAD 1436192287 1565532516</p>
+31 verbose bad json     <hr>
+31 verbose bad json     <p>Varnish cache server</p>
+31 verbose bad json   </body>
+31 verbose bad json </html>
+32 error registry error parsing json
+33 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+33 info retry
+33 info retry <?xml version="1.0" encoding="utf-8"?>
+33 info retry <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+33 info retry  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+33 info retry <html>
+33 info retry   <head>
+33 info retry     <title>503 backend read error</title>
+33 info retry   </head>
+33 info retry   <body>
+33 info retry     <h1>Error 503 backend read error</h1>
+33 info retry     <p>backend read error</p>
+33 info retry     <h3>Guru Mediation:</h3>
+33 info retry     <p>Details: cache-iad2144-IAD 1436192287 1565532516</p>
+33 info retry     <hr>
+33 info retry     <p>Varnish cache server</p>
+33 info retry   </body>
+33 info retry </html>
+34 info attempt registry request try #2 at 10:18:17 AM
+35 http request PUT https://registry.npmjs.org/generator-vrjs
+36 http 503 https://registry.npmjs.org/generator-vrjs
+37 verbose bad json <?xml version="1.0" encoding="utf-8"?>
+37 verbose bad json <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+37 verbose bad json  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+37 verbose bad json <html>
+37 verbose bad json   <head>
+37 verbose bad json     <title>503 backend read error</title>
+37 verbose bad json   </head>
+37 verbose bad json   <body>
+37 verbose bad json     <h1>Error 503 backend read error</h1>
+37 verbose bad json     <p>backend read error</p>
+37 verbose bad json     <h3>Guru Mediation:</h3>
+37 verbose bad json     <p>Details: cache-atl6223-ATL 1436192343 1435528515</p>
+37 verbose bad json     <hr>
+37 verbose bad json     <p>Varnish cache server</p>
+37 verbose bad json   </body>
+37 verbose bad json </html>
+38 error registry error parsing json
+39 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+39 info retry
+39 info retry <?xml version="1.0" encoding="utf-8"?>
+39 info retry <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+39 info retry  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+39 info retry <html>
+39 info retry   <head>
+39 info retry     <title>503 backend read error</title>
+39 info retry   </head>
+39 info retry   <body>
+39 info retry     <h1>Error 503 backend read error</h1>
+39 info retry     <p>backend read error</p>
+39 info retry     <h3>Guru Mediation:</h3>
+39 info retry     <p>Details: cache-atl6223-ATL 1436192343 1435528515</p>
+39 info retry     <hr>
+39 info retry     <p>Varnish cache server</p>
+39 info retry   </body>
+39 info retry </html>
+40 info attempt registry request try #3 at 10:20:03 AM
+41 http request PUT https://registry.npmjs.org/generator-vrjs
+42 http 403 https://registry.npmjs.org/generator-vrjs
+43 verbose headers { 'content-type': 'application/json',
+43 verbose headers   'cache-control': 'max-age=60',
+43 verbose headers   'content-length': '95',
+43 verbose headers   'accept-ranges': 'bytes',
+43 verbose headers   date: 'Mon, 06 Jul 2015 14:21:01 GMT',
+43 verbose headers   via: '1.1 varnish',
+43 verbose headers   connection: 'keep-alive',
+43 verbose headers   'x-served-by': 'cache-jfk1025-JFK',
+43 verbose headers   'x-cache': 'MISS',
+43 verbose headers   'x-cache-hits': '0',
+43 verbose headers   'x-timer': 'S1436192403.907847,VS0,VE57111' }
+44 verbose request invalidating /Users/sfrees/.npm/registry.npmjs.org/generator-vrjs on PUT
+45 error publish Failed PUT 403
+46 verbose stack Error: "You cannot publish over the previously published version 0.0.2." : generator-vrjs
+46 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+46 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+46 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:354:22)
+46 verbose stack     at Request.emit (events.js:110:17)
+46 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1207:14)
+46 verbose stack     at Request.emit (events.js:129:20)
+46 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1153:12)
+46 verbose stack     at IncomingMessage.emit (events.js:129:20)
+46 verbose stack     at _stream_readable.js:908:16
+46 verbose stack     at process._tickCallback (node.js:355:11)
+47 verbose statusCode 403
+48 verbose pkgid generator-vrjs
+49 verbose cwd /Users/sfrees/projects/generator-vrjs
+50 error Darwin 14.3.0
+51 error argv "node" "/usr/local/bin/npm" "publish"
+52 error node v0.12.5
+53 error npm  v2.11.2
+54 error code E403
+55 error "You cannot publish over the previously published version 0.0.2." : generator-vrjs
+56 error If you need help, you may report this error at:
+56 error     <https://github.com/npm/npm/issues>
+57 verbose exit [ 1, true ]
