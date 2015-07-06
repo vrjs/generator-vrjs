@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html style="padding:0px;margin:0px;overflow: hidden;">
   <head>
     <title><%= title %></title>
   </head>
-  <body>
+  <body style="padding:0px;margin:0px;-webkit-overflow-scrolling: touch;">
     <script>
-        document.addEventListener("keydown", function (e) {
-            if (e.which === 123) {
-                require('remote').getCurrentWindow().toggleDevTools();
-            } else if (e.which === 116) {
-                location.reload();
-            }
-        });
-    </script>
+        var THREE = require('three');
+        var debug = false;
 
-    <script>
-        var THREE = require('three')
         var scene, camera, renderer;
         var geometry, material, mesh;
+        var rift;
+
+        var active_renderer;
 
         var keytrackr = require('vrjs-trackr-key')
         var trackr = keytrackr.make(THREE);
@@ -61,6 +56,16 @@
             renderer.setSize( window.innerWidth, window.innerHeight );
             renderer.setClearColor(scene.fog.color, 1);
 
+
+            ////////hmd/////////
+            var hmd = require('./OculusRiftEffect');
+
+            rift = new hmd.Rift(THREE, renderer, { worldScale: 1 } );
+            rift.setSize( window.innerWidth, window.innerHeight );
+            ////////////////////
+
+
+            enter_live()
             document.body.appendChild( renderer.domElement );
         }
 
@@ -68,9 +73,41 @@
             trackr.poll()
             requestAnimationFrame( animate );
 
-            renderer.render( scene, camera );
+            active_renderer.setSize( window.innerWidth, window.innerHeight );
+            active_renderer.render( scene, camera );
         }
+
+        function enter_live() {
+            debug = false;
+            active_renderer = rift;
+            require('remote').getCurrentWindow().setFullScreen(true);
+        }
+        function enter_debug() {
+            debug = true;
+            active_renderer = renderer;
+            require('remote').getCurrentWindow().setFullScreen(false);
+        }
+
+        document.addEventListener("keydown", function (e) {
+            console.log(e.which)
+            if (e.which === 123) {
+                require('remote').getCurrentWindow().toggleDevTools();
+            } else if (e.which === 116) {
+                location.reload();
+            }
+            else if (e.which === 68) {
+                if (debug) {
+                    enter_live()
+                }
+                else {
+                    enter_debug()
+                }
+            }
+        });
+
+
 
     </script>
   </body>
 </html>
+
