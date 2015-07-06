@@ -6,9 +6,8 @@
     "generators"
   ],
   "keywords": [
-    "[\"yeoman-generator\"",
-    "\"virtual",
-    "reality\"]"
+    "yeoman-generator",
+    "virtual reality"
   ],
   "dependencies": {
     "yeoman-generator": "^0.20.1"
