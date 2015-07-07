@@ -1,6 +1,6 @@
 {
   "name": "generator-vrjs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generator for vrjs projects",
   "files": [
     "generators"
