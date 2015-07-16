@@ -23,8 +23,8 @@ function init() {
     camera.position.y = 50;
     camera.position.z = 1500;
 
-    trackr.channels[2].offset = new THREE.Vector3(0, 50, 1500);
-    trackr.channels[2].scale = new THREE.Vector3(100, 100, 100);
+    trackr.offset(2, new THREE.Vector3(0, 50, 1500));
+    trackr.scale(2, new THREE.Vector3(100, 100, 100));
     trackr.add(camera, 2);
 
     geometry = new THREE.BoxGeometry(200, 200, 200);
