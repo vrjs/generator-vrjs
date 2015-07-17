@@ -1,7 +1,7 @@
 {
   "name"    : "your-app",
-  "version" : "0.1.0",
-  "main"    : "main.js", 
+  "version" : "0.0.1",
+  "main"    : "index.js", 
 
   "dependencies": {
     "three": "^0.71.0", 
