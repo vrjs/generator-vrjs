@@ -86,6 +86,19 @@ function animate() {
     active_renderer.render(scene, camera);
 }
 
+
+// This will be called on window close by the main process.
+// You need to explicitely call window.close to confirm and allow
+// the window to close!
+
+// This gives you the chance to do some asynchronous work (save data to files)
+// before the window actually closes.
+
+// DO NOT call this function yourself, it will be called by index.js (main process)
+function cleanup() {
+    window.close();
+}
+
 function enter_live() {
     debug = false;
     renderer.autoClear = false;
