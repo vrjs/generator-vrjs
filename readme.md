@@ -3,7 +3,7 @@
 ## Pre-requisites
 
 - Node.js version 0.12 and above
-  - [https://nodejs.org/download/](https://nodejs.org/download/)
+  - [https://nodejs.org/download/](https://nodejs.org/download/release/latest)
   - See [this](https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories) for Linux
 
 - Yoeman
